@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: user-center-backend
+# DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/benaso
+#sessoin失效时间
+  session:
+    timeout: 86400
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+server:
+  port: 8080
+  servlet:
+    context-path: /api
